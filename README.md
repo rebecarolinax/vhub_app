@@ -1,1 +1,0 @@
-# vitalhub_app
