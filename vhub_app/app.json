@@ -9,6 +9,19 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "splash": {
+      "hideExponentSplash": true,
+      "image": "./src/assets/images/white_splashscreen.png",
+      "resizeMode": "stretch",
+      "backgroundColor": "#ffffff",
+      "statusBar": {
+        "style": "none"
+      },
+      "androidStatusBar": {
+        "backgroundColor": "#FFFFFF",
+        "barStyle": "dark-content"
+      }
+    },
     "ios": {
       "supportsTablet": true
     },
