@@ -3,10 +3,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Navigation } from "./src/screens/Navigation/Navigation";
 import { Login } from "./src/screens/Login/Login";
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
-import { Quicksand_500Medium } from '@expo-google-fonts/quicksand';
+import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
 import { PasswordRecover } from "./src/screens/PasswordRecover/PasswordRecover";
 import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
+import { CheckEmail } from "./src/screens/CheckEmail/CheckEmail";
+import { UserProfile } from "./src/screens/UserProfile/UserProfile";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +19,8 @@ export default function App() {
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
-    Quicksand_500Medium
+    Quicksand_500Medium,
+    Quicksand_600SemiBold
   });
   if (!fontsLoaded && !fontError) {
     return null;
@@ -62,6 +65,12 @@ export default function App() {
           name="CreateAccount"
           component={CreateAccount}
           options={{ title: 'Criar conta' }}
+        />
+
+        <Stack.Screen
+          name='CheckEmail'
+          component={CheckEmail}
+          options={{ title: 'Verificar E-mail' }}
         />
 
       </Stack.Navigator>

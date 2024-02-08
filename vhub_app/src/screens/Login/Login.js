@@ -1,4 +1,4 @@
-
+// components
 import { Contain, ContentAccount, TextAccount } from "../../components/Contain/style"
 import { Logo, LogoGoogle } from "../../components/Logo/style"
 import { ButtonTitle, ButtonTitleGoogle, Title } from "../../components/Title/style"
@@ -6,9 +6,7 @@ import { Input } from "../../components/Input/style"
 import { LinkBold, LinkMedium } from "../../components/Link/style"
 import { Button, ButtonGoogle } from "../../components/Button/style"
 
-
-
-export const Login = () => {
+export const Login = ({ navigation }) => {
     return (
         <Contain>
 
@@ -19,7 +17,7 @@ export const Login = () => {
             <Input placeholder="Usuário ou E-mail" />
             <Input placeholder="Senha" />
 
-            <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={() => navigation.navigate("PasswordRecover")}>Esqueceu sua senha?</LinkMedium>
 
             <Button>
                 <ButtonTitle>Entrar</ButtonTitle>
@@ -31,7 +29,7 @@ export const Login = () => {
             </ButtonGoogle>
 
             <ContentAccount>
-                <TextAccount>Não tem conta? <LinkBold>Crie uma conta agora!</LinkBold></TextAccount>
+                <TextAccount>Não tem conta? <LinkBold onPress={() => navigation.navigate("CreateAccount")}>Crie uma conta agora!</LinkBold></TextAccount>
             </ContentAccount>
 
         </Contain>

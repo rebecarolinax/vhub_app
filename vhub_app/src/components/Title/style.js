@@ -6,6 +6,7 @@ color: #33303E;
 font-family: "MontserratAlternates_600SemiBold";
 margin-bottom: 15px;
 `
+
 export const ButtonTitle = styled.Text`
 font-size: 16px;
 color: #FFF;
@@ -23,4 +24,8 @@ font-size: 16px;
 color: #5F5C6B;
 font-family: "Quicksand_500Medium";
 text-align: center;
+`
+
+export const SubtitleFocus = styled.Text`
+color: #496BBA;
 `

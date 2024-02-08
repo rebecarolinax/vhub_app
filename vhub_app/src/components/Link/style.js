@@ -21,3 +21,9 @@ export const LinkBoldBold = styled(LinkBold)`
 margin-top: 30px;
 color: #344F8F;
 `
+
+export const LinkAction = styled(LinkBold)`
+color: #344F8F;
+margin-top: 30px;
+font-size:14px;
+`

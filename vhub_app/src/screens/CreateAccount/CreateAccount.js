@@ -1,3 +1,4 @@
+// components
 import { Button } from "../../components/Button/style"
 import { Contain, ContentSubtitle } from "../../components/Contain/style"
 import { Input } from "../../components/Input/style"
@@ -5,9 +6,10 @@ import { LinkBoldBold } from "../../components/Link/style"
 import { Logo } from "../../components/Logo/style"
 import { ButtonTitle, Subtitle, Title } from "../../components/Title/style"
 
-export const CreateAccount = () => {
+export const CreateAccount = ({ navigation }) => {
     return (
         <Contain>
+
             <Logo source={require("../../assets/images/vhub_logo.png")} />
 
             <Title>Criar conta</Title>
@@ -17,16 +19,14 @@ export const CreateAccount = () => {
             </ContentSubtitle>
 
             <Input placeholder="Usuário ou E-mail" />
-
             <Input placeholder="Senha" />
-
             <Input placeholder="Confirmar Senha" />
 
             <Button>
                 <ButtonTitle>Cadastrar</ButtonTitle>
             </Button>
 
-            <LinkBoldBold>Cancelar</LinkBoldBold>
+            <LinkBoldBold onPress={() => navigation.navigate("Login")}>Cancelar</LinkBoldBold>
 
         </Contain>
     )
