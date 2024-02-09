@@ -1,29 +1,24 @@
 import styled from "styled-components";
 
 export const LinkMedium = styled.Text`
-font-size: 14px;
-color: #8C8A97;
-font-family: "MontserratAlternates_500Medium";
-margin-top: 10px;
-align-self: flex-start;
-margin-left: 20px;
-text-decoration: underline;
+    font-family: MontserratAlternates_500Medium;
+    font-size: 14px;
+    color: #8C8A97;
+    margin-right: 190px;
+    text-decoration: underline;
 `
 
-export const LinkBold = styled.Text`
-font-size: 16px;
-color: #4D659D;
-font-family: "MontserratAlternates_600SemiBold";
-text-decoration: underline;
+export const TextAccount = styled.Text`
+    font-family: MontserratAlternates_500Medium;
+    font-size: 14px;
+    text-align: center;
 `
 
-export const LinkBoldBold = styled(LinkBold)`
-margin-top: 30px;
-color: #344F8F;
-`
-
-export const LinkAction = styled(LinkBold)`
-color: #344F8F;
-margin-top: 30px;
-font-size:14px;
+export const TextResend = styled(LinkMedium)`
+    font-family: 'Quicksand_600SemiBold';
+    position: relative;
+    left: 100px;
+    margin-top: 10px;
+    color: #344F8F;
+    margin-bottom: 30px;
 `

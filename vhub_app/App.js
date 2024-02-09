@@ -7,8 +7,9 @@ import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/q
 import { PasswordRecover } from "./src/screens/PasswordRecover/PasswordRecover";
 import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
-import { CheckEmail } from "./src/screens/CheckEmail/CheckEmail";
+import { EmailCheck } from "./src/screens/EmailCheck/EmailCheck";
 import { UserProfile } from "./src/screens/UserProfile/UserProfile";
+import { Prontuary } from "./src/screens/Prontuary/Prontuary";
 
 const Stack = createNativeStackNavigator();
 
@@ -68,9 +69,21 @@ export default function App() {
         />
 
         <Stack.Screen
-          name='CheckEmail'
-          component={CheckEmail}
+          name='EmailCheck'
+          component={EmailCheck}
           options={{ title: 'Verificar E-mail' }}
+        />
+
+        <Stack.Screen
+          name='UserProfile'
+          component={UserProfile}
+          options={{ title: 'Perfil do Usuário' }}
+        />
+
+        <Stack.Screen
+          name='Prontuary'
+          component={Prontuary}
+          options={{ title: 'Prontuário do Usuário' }}
         />
 
       </Stack.Navigator>

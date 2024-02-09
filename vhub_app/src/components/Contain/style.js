@@ -3,38 +3,8 @@ import styled from "styled-components";
 export const Contain = styled.SafeAreaView`
     flex: 1;
     align-items: center;
-    background-color: #ffffff;
+    background-color: white;
 `
-
-export const ContentAccount = styled.View`
-width: 90%;
-align-self: center;
-justify-content: center;
-flex-direction: row;
-margin-top: 30px;
-`
-
-export const TextAccount = styled.Text`
-font-size: 16px;
-font-family: "MontserratAlternates_600SemiBold";
-`
-
-export const ContentSubtitle = styled.View`
-width: 90%;
-align-self: center;
-justify-content: center;
-flex-direction: row;
-margin-top: 5px;
-`
-
-export const InputContain = styled.View`
-width: 90%;
-align-self: center;
-justify-content: space-between;
-flex-direction: row;
-margin-top: 20px;
-`
-
 export const ContainIcons = styled.View`
     align-self: flex-start;
     margin-left: 20px;
@@ -43,5 +13,47 @@ export const ContainIcons = styled.View`
     top: 20px;
 `
 
-export const ContainScrollView = styled.ScrollView`
+export const ContainUser = styled.ScrollView`
+flex: 1;
+background-color: white;
+`
+
+export const InformationContent = styled.View`
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 70px;
+    background-color: #FFFFFF;
+    border: 1px solid white;
+    elevation: 10;
+    width: 80%;
+    border-radius: 5px;
+    height: 120px;
+`
+
+export const ContentAccount = styled.View`
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center; 
+    gap: 15px;
+`
+
+export const PhotoContain = styled.View`
+    width: 100%;
+    align-items: center;
+    height: 330px;
+`
+
+export const CityContain = styled.View`
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+`
+
+export const UserContain = styled.Image`
+    width: 100%;
+    height: 280px;
 `

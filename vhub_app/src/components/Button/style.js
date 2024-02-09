@@ -1,21 +1,47 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.TouchableOpacity`
-width: 90%;
-height: 44px;
-background-color: #496BBA;
-border-radius: 5px;
-padding: 12px 8px 12px 8px;
-margin-top: 30px;
-border: 1px solid #496BBA;
-align-items: center;
-justify-content: center;
+    background-color: #496BBA;
+    width: 90%;
+    height: 44px;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px;
 `
 
-export const ButtonGoogle = styled(Button)`
-background-color: #FAFAFA;
-gap: 10px;
-margin-top: 15px;
-margin-bottom: 15px;
-flex-direction: row;
+export const ButtonUser = styled(Button)`
+    margin-bottom: 30px;
+`
+
+export const ButtonEdit = styled(Button)`
+    margin-bottom: 30px;
+    margin-top: 0px;
+    
+    ${props => !props.editable && css`
+    background-color: #ACABB7;`}
+`
+
+export const ButtonExit = styled(Button)`
+   width: 50%;
+   margin-bottom: 30px;
+   margin-top: 0px;
+   background-color: #ACABB7;
+
+   
+`
+
+
+export const ButtonGoogle = styled.TouchableOpacity`
+    background-color: #FAFAFA;
+    border: 1px solid #496BBA;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 44px;
+    align-items: center;
+    padding: 10px;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 20px;
 `
