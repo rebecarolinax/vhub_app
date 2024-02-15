@@ -4,7 +4,7 @@ export const Title = styled.Text`
     font-family: "MontserratAlternates_600SemiBold";
     font-size: 20px;
     color: #33303E;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 `
 
 export const ButtonTitle = styled.Text`
@@ -34,18 +34,4 @@ export const LabelUser = styled(Title)`
 
 export const LabelProntuary = styled(LabelUser)`
     margin-top: 2px;
-`
-
-export const TextQuick = styled.Text`
-    font-family: Quicksand_600SemiBold;
-    font-size: 16px;
-    color: #5F5C6B;
-    text-align: center;
-    margin-bottom: 25px;
-    width: 90%;
-`
-
-export const SubTextQuick = styled(TextQuick)`
-    font-size: 14px;
-    margin-bottom: 0px;
 `

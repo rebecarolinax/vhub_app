@@ -27,11 +27,12 @@ export const InputUser = styled.TextInput`
 `
 
 export const InputCity = styled(InputUser)`
-    width: 150px;
+    padding: 16px;
+    width: 155px;
 `
 
 export const InputProntuary = styled(Input)`
     height: 121px;
-    font-size: 16px;
+    font-size: 14px;
     
 `

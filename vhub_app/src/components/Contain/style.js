@@ -5,6 +5,7 @@ export const Contain = styled.SafeAreaView`
     align-items: center;
     background-color: white;
 `
+
 export const ContainIcons = styled.View`
     align-self: flex-start;
     margin-left: 20px;
@@ -43,6 +44,14 @@ export const PhotoContain = styled.View`
     width: 100%;
     align-items: center;
     height: 330px;
+`
+
+export const UserProfilePhotoHeaderContain = styled.Image`
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+    border-radius: 5px;
 `
 
 export const CityContain = styled.View`

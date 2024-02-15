@@ -31,7 +31,6 @@ export const ButtonExit = styled(Button)`
    
 `
 
-
 export const ButtonGoogle = styled.TouchableOpacity`
     background-color: #FAFAFA;
     border: 1px solid #496BBA;

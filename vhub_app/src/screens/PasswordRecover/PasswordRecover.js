@@ -1,9 +1,10 @@
 import { Contain, ContainIcons } from "../../components/Contain/style"
-import { TextQuick, Title, ButtonTitle } from "../../components/Title/style"
+import { Title, ButtonTitle } from "../../components/Title/style"
 import { Button, } from "../../components/Button/style"
 import { Input } from "../../components/Input/style"
 import { Logo } from "../../components/Logo/style"
 import { AntDesign } from "@expo/vector-icons"
+import { TextQuickSB } from "../../components/Text/style"
 
 export const PasswordRecover = ({ navigation }) => {
     return (
@@ -19,7 +20,7 @@ export const PasswordRecover = ({ navigation }) => {
 
             <Title>Recuperar senha</Title>
 
-            <TextQuick>Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha</TextQuick>
+            <TextQuickSB>Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha</TextQuickSB>
 
             <Input
                 style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}

@@ -1,8 +1,9 @@
 import { Contain, ContainIcons } from "../../components/Contain/style"
-import { TextQuick, Title, ButtonTitle } from "../../components/Title/style"
+import { Title, ButtonTitle } from "../../components/Title/style"
 import { Button } from "../../components/Button/style"
 import { Input } from "../../components/Input/style"
 import { Logo } from "../../components/Logo/style"
+import { TextQuickSB } from "../../components/Text/style"
 import { AntDesign } from "@expo/vector-icons"
 
 export const PasswordReset = ({ navigation }) => {
@@ -19,7 +20,7 @@ export const PasswordReset = ({ navigation }) => {
 
             <Title>Redefinir Senha</Title>
 
-            <TextQuick>Insira e confirme a sua nova senha</TextQuick>
+            <TextQuickSB>Insira e confirme a sua nova senha</TextQuickSB>
 
             <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
                 placeholder="Nova Senha"
