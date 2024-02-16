@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LinearGradient } from "expo-linear-gradient";
 
 export const Contain = styled.SafeAreaView`
     flex: 1;
@@ -46,13 +47,7 @@ export const PhotoContain = styled.View`
     height: 330px;
 `
 
-export const UserProfilePhotoHeaderContain = styled.Image`
-    margin-top: 20px;
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0px;
-    border-radius: 5px;
-`
+
 
 export const CityContain = styled.View`
     width: 100%;
@@ -65,4 +60,19 @@ export const CityContain = styled.View`
 export const UserContain = styled.Image`
     width: 100%;
     height: 280px;
+`
+
+export const HeaderContain = styled(LinearGradient).attrs({
+    colors: ['#60BFC5', '#496BBA'],
+    start: { x: -0.05, y: 1.08 },
+    end: { x: 1, y: 0 }
+})`
+    width: 100%;
+    height: 102px;
+    padding: 20px;
+    padding-bottom: 22px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 4px 15px #00000014;
 `

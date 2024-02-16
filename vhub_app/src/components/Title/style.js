@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// MainTitle
 export const Title = styled.Text`
     font-family: "MontserratAlternates_600SemiBold";
     font-size: 20px;
@@ -7,6 +8,7 @@ export const Title = styled.Text`
     /* margin-bottom: 25px; */
 `
 
+// TitleButtonHomeScreen
 export const ButtonTitle = styled.Text`
     font-family: "MontserratAlternates_700Bold";
     color: white;
@@ -14,22 +16,24 @@ export const ButtonTitle = styled.Text`
     text-transform: uppercase;
 `
 
+// TitleButtonHomeScreenGoogle
 export const ButtonTitleGoogle = styled(ButtonTitle)`
     color: #496BBA;   
 `
 
+// TitleUserProfile - 16px - MontserratAlternates
 export const TitleUser = styled(Title)`
     font-size: 16px;
     margin-bottom: 10px;
 `
 
+// LabelUserProfile
 export const LabelUser = styled(Title)`
     font-family: 'Quicksand_600SemiBold';
     font-size: 16px;
     margin-bottom: 10px;
     margin-top: 30px;
     width: 88%;
-    
 `
 
 export const LabelProntuary = styled(LabelUser)`

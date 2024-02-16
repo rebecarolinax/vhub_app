@@ -12,6 +12,7 @@ import { EmailCheck } from "./src/screens/EmailCheck/EmailCheck";
 import { UserProfile } from "./src/screens/UserProfile/UserProfile";
 import { Prontuary } from "./src/screens/Prontuary/Prontuary";
 import { DoctorHome } from "./src/screens/DoctorHome/DoctorHome";
+import SplashScreen from "./src/screens/SplashScreen/SplashScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,12 @@ export default function App() {
 
     <NavigationContainer>
       <Stack.Navigator>
+
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
 
         <Stack.Screen
           name="Navigation"
