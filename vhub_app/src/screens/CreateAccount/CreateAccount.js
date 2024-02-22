@@ -1,40 +1,30 @@
-import { Contain } from "../../components/Contain/style"
-import { Title, ButtonTitle } from "../../components/Title/style"
-import { Button, } from "../../components/Button/style"
-import { Input } from "../../components/Input/style"
-import { TextResend } from "../../components/Link/style"
+import { Container } from "../../components/Contain/style"
 import { Logo } from "../../components/Logo/style"
-import { TextQuickSB } from "../../components/Text/style"
+import { Title, SubTitle } from "../../components/Title/style"
+import { Input } from "../../components/Input/style"
+import { Button, ButtonTitle, SecondaryButton, SecondaryButtonText } from "../../components/Button/style"
 
 export const CreateAccount = ({ navigation }) => {
     return (
-        <Contain>
+        <Container>
             <Logo source={require("../../assets/images/vhub_logo.png")} />
+            <Title>Criar Conta</Title>
 
-            <Title>Criar conta</Title>
+            <SubTitle>Insira seu endereço de e-mail e senha para realizar seu cadastro.</SubTitle>
 
-            <TextQuickSB>Insira seu endereço de e-mail e senha para realizar seu cadastro.</TextQuickSB>
+            <Input placeholder={'Insira seu Email'} />
 
-            <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
-                placeholder="Usuário ou E-mail"
-                placeholderTextColor="#34898F"
-            />
+            <Input placeholder={'Senha'} secureTextEntry />
 
-            <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
-                placeholder="Senha"
-                placeholderTextColor="#34898F"
-            />
-
-            <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
-                placeholder="Confirmar Senha"
-                placeholderTextColor="#34898F"
-            />
+            <Input placeholder={'Confirmar Senha'} secureTextEntry />
 
             <Button>
-                <ButtonTitle>Cadastrar</ButtonTitle>
+                <ButtonTitle>CADASTRAR</ButtonTitle>
             </Button>
 
-            <TextResend onPress={() => navigation.navigate("Login")}>Cancelar</TextResend>
-        </Contain>
-    );
+            <SecondaryButton>
+                <SecondaryButtonText onPress={() => navigation.navigate('Login')}>Cancelar</SecondaryButtonText>
+            </SecondaryButton>
+        </Container>
+    )
 }

@@ -1,11 +1,9 @@
-import styled from 'styled-components/native'
+import styled from "styled-components";
+import CalendarStrip from "react-native-calendar-strip"
 
-//import lib calendar-strip
-import CalendarStrip from "react-native-calendar-strip";
-
-export const StyledCalendarStrip = styled(CalendarStrip)`
-  height: 100px;
-  width: 100%;
-  margin: 20px 0px ;
-  padding: 0px;
+export const CalendarStyle = styled(CalendarStrip)`
+    height: 100px;
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 18px;
 `

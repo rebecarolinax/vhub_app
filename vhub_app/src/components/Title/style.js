@@ -1,41 +1,55 @@
 import styled from "styled-components";
 
-// MainTitle
 export const Title = styled.Text`
-    font-family: "MontserratAlternates_600SemiBold";
     font-size: 20px;
-    color: #33303E;
-    /* margin-bottom: 25px; */
+    color: #33303e;
+    font-family: 'MontserratAlternates_600SemiBold';
+    margin-bottom: 5px;
 `
 
-// TitleButtonHomeScreen
-export const ButtonTitle = styled.Text`
-    font-family: "MontserratAlternates_700Bold";
+export const TitleHeader = styled(Title)`
+    font-size: 16px;
+    margin-bottom: 0px;
     color: white;
+`
+
+export const TitleCard = styled(Title)`
+    color: #33303E;
+    font-size: 16px;
+`
+
+export const SubTitleContainer = styled.View`
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+`
+export const SubTitleContainerModal = styled(SubTitleContainer)`
+    width: 90%;
+`
+
+export const SubTitle = styled.Text`
+    font-size: 16px;
+    font-family: 'Quicksand_500Medium';
+    color: #5F5C6B;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+`
+
+export const SubTitleCardAge = styled.Text`
     font-size: 14px;
-    text-transform: uppercase;
+    font-family: 'Quicksand_400Regular';
+    color: #8C8A97;
 `
 
-// TitleButtonHomeScreenGoogle
-export const ButtonTitleGoogle = styled(ButtonTitle)`
-    color: #496BBA;   
-`
-
-// TitleUserProfile - 16px - MontserratAlternates
-export const TitleUser = styled(Title)`
-    font-size: 16px;
-    margin-bottom: 10px;
-`
-
-// LabelUserProfile
-export const LabelUser = styled(Title)`
+export const SubTitleCard = styled.Text`
+    font-size: 14px;
     font-family: 'Quicksand_600SemiBold';
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-top: 30px;
-    width: 88%;
+    color: #8C8A97;
 `
 
-export const LabelProntuary = styled(LabelUser)`
-    margin-top: 2px;
+export const SubTitleCardAvaliation = styled.Text`
+    font-size: 14px;
+    font-family: 'Quicksand_600SemiBold';
+    color: #F9A620;
 `

@@ -1,40 +1,30 @@
-import { Contain, ContainIcons } from "../../components/Contain/style"
-import { Title, ButtonTitle } from "../../components/Title/style"
-import { Button } from "../../components/Button/style"
-import { Input } from "../../components/Input/style"
+import { Container, ContainerIcons } from "../../components/Contain/style"
+import { Title, SubTitle } from "../../components/Title/style"
 import { Logo } from "../../components/Logo/style"
-import { TextQuickSB } from "../../components/Text/style"
-import { AntDesign } from "@expo/vector-icons"
+import { Input } from "../../components/Input/style"
+import { Button, ButtonTitle } from "../../components/Button/style"
+import { AntDesign } from '@expo/vector-icons';
+
 
 export const PasswordReset = ({ navigation }) => {
-
     return (
-        <Contain>
-
-            <ContainIcons>
-                {/* utilizando AntDesign para criação dos botões de retorno */}
+        <Container>
+            <ContainerIcons>
                 <AntDesign onPress={() => navigation.navigate('Login')} name="closecircle" size={30} color="#49B3BA" />
-            </ContainIcons>
-
+            </ContainerIcons>
             <Logo source={require("../../assets/images/vhub_logo.png")} />
 
             <Title>Redefinir Senha</Title>
 
-            <TextQuickSB>Insira e confirme a sua nova senha</TextQuickSB>
+            <SubTitle>Insira e confirme a sua nova senha</SubTitle>
 
-            <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
-                placeholder="Nova Senha"
-                placeholderTextColor="#34898F"
-            />
+            <Input placeholder={'Nova Senha'} secureTextEntry />
 
-            <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
-                placeholder="Confirmar nova senha"
-                placeholderTextColor="#34898F"
-            />
+            <Input placeholder={'Confirme nova senha'} secureTextEntry />
 
-            <Button>
+            <Button onPress={() => navigation.navigate('Login')}>
                 <ButtonTitle>Confirmar nova senha</ButtonTitle>
             </Button>
-        </Contain>
-    );
+        </Container>
+    )
 }

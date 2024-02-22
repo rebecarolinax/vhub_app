@@ -1,18 +1,33 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Navigation } from "./src/screens/Navigation/Navigation";
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
-import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
+
+import {
+  useFonts,
+  MontserratAlternates_600SemiBold,
+  MontserratAlternates_500Medium,
+  MontserratAlternates_700Bold
+} from '@expo-google-fonts/montserrat-alternates';
+
+import {
+  Quicksand_500Medium,
+  Quicksand_600SemiBold,
+  Quicksand_400Regular
+} from '@expo-google-fonts/quicksand';
 
 import { Login } from "./src/screens/Login/Login";
 import { PasswordRecover } from "./src/screens/PasswordRecover/PasswordRecover";
 import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
-import { EmailCheck } from "./src/screens/EmailCheck/EmailCheck";
-import { UserProfile } from "./src/screens/UserProfile/UserProfile";
-import { Prontuary } from "./src/screens/Prontuary/Prontuary";
+import { EmailCode } from "./src/screens/EmailCode/EmailCode";
+import { ProntuaryMedical } from "./src/screens/ProntuaryMedical/ProntuaryMedical";
 import { DoctorHome } from "./src/screens/DoctorHome/DoctorHome";
+import { PatientHome } from "./src/screens/PatientHome/PatientHome";
+import { ConsultationLocation } from "./src/screens/ConsultationLocation/ConsultationLocation";
+import { ClinicSelect } from "./src/screens/ClinicSelect/ClinicSelect";
+import { PatientProfile } from "./src/screens/PatientProfile/PatientProfile";
 import SplashScreen from "./src/screens/SplashScreen/SplashScreen";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -24,7 +39,8 @@ export default function App() {
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
+    Quicksand_400Regular
   });
   if (!fontsLoaded && !fontError) {
     return null;
@@ -78,21 +94,21 @@ export default function App() {
         />
 
         <Stack.Screen
-          name='EmailCheck'
-          component={EmailCheck}
+          name='EmailCode'
+          component={EmailCode}
           options={{ title: 'Verificar E-mail' }}
         />
 
         <Stack.Screen
-          name='UserProfile'
-          component={UserProfile}
-          options={{ title: 'Perfil do Usuário' }}
+          name='PatientProfile'
+          component={PatientProfile}
+          options={{ title: 'Perfil do Paciente' }}
         />
 
         <Stack.Screen
-          name='Prontuary'
-          component={Prontuary}
-          options={{ title: 'Prontuário do Usuário' }}
+          name='ProntuaryMedical'
+          component={ProntuaryMedical}
+          options={{ title: 'Prontuário do Paciente' }}
         />
 
         <Stack.Screen
@@ -101,8 +117,25 @@ export default function App() {
           options={{ title: 'Página Home do Médico' }}
         />
 
+        <Stack.Screen
+          name='PatientHome'
+          component={PatientHome}
+          options={{ title: 'Página Home do Paciente' }}
+        />
+
+        <Stack.Screen
+          name='ConsultationLocation'
+          component={ConsultationLocation}
+          options={{ title: 'ConsultaionLocation' }}
+        />
+
+        <Stack.Screen
+          name='ClinicSelect'
+          component={ClinicSelect}
+          options={{ title: 'ClinicSelect' }}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-

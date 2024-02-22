@@ -1,24 +1,21 @@
 import styled from "styled-components";
 
 export const LinkMedium = styled.Text`
-    font-family: MontserratAlternates_500Medium;
     font-size: 14px;
+    font-family: 'MontserratAlternates_500Medium';
     color: #8C8A97;
-    margin-right: 190px;
-    text-decoration: underline;
-`
-
-export const TextAccount = styled.Text`
-    font-family: MontserratAlternates_500Medium;
-    font-size: 14px;
-    text-align: center;
-`
-
-export const TextResend = styled(LinkMedium)`
-    font-family: 'Quicksand_600SemiBold';
-    position: relative;
-    left: 100px;
+    align-self: flex-start;
+    margin-left: 20px;
     margin-top: 10px;
-    color: #344F8F;
-    margin-bottom: 30px;
+    text-decoration: underline;
+    text-decoration-color: #8C8A97; 
+    margin-bottom: 15px;
+`
+
+export const LinkAccount = styled.Text`
+    font-size: 16px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    color: #4D659D;
+    text-decoration: underline;
+    text-decoration-color: #4d659d;
 `

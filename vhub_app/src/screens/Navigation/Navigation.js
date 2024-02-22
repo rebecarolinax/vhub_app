@@ -21,22 +21,32 @@ export const Navigation = ({ navigation }) => {
             />
             <Button
                 title="Verificar Email"
-                onPress={() => navigation.navigate("EmailCheck")}
+                onPress={() => navigation.navigate("EmailCode")}
             />
-
+            
             <Button
-                title="Perfil do Usuário"
-                onPress={() => navigation.navigate("UserProfile")}
-            />
-
-            <Button
-                title="Prontuário do Usuário"
-                onPress={() => navigation.navigate("Prontuary")}
+                title="Prontuário do Paciente"
+                onPress={() => navigation.navigate("ProntuaryMedical")}
             />
 
             <Button
                 title="Página Home do Médico"
                 onPress={() => navigation.navigate("DoctorHome")}
+            />
+
+            <Button
+                title="Página Home do Paciente"
+                onPress={() => navigation.navigate("PatientHome")}
+            />
+
+            <Button
+                title="ClinicSelect"
+                onPress={() => navigation.navigate("ClinicSelect")}
+            />
+
+            <Button
+                title="PatientProfile"
+                onPress={() => navigation.navigate("PatientProfile")}
             />
 
         </View>

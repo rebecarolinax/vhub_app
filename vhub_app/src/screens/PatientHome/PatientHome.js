@@ -1,34 +1,34 @@
-import { FilterStatusButton } from "../../components/StatusButton/index";
+import { FilterStatusButton } from "../../components/StatusButton/index"
 import { StatusButtonContainer } from "../../components/StatusButton/style"
-import { CardList } from "../../components/CardList/index";
+import { Calendar } from "../../components/Calendar/index"
 import { Container } from "../../components/Contain/style"
-import { Calendar } from "../../components/Calendar/index";
-import { Header } from "../../components/Header/index";
-import { useState } from "react";
+import { CardList } from "../../components/CardList/index"
+import { Header } from "../../components/Header/index"
+import { useState } from "react"
+import { ScheduleAppointmentButton } from "../../components/ScheduleAppointmentButton/index"
 
-const cardsPatient = [
-    {
-        id: '1', 
-        img: { uri: 'https://radiocidade.fm/uploads/2021/12/Lana-Del-Rey-4.png' },
-        situation: 'pendente',
-        name: 'Lana Del Rey',
-        age: '38 anos',
-        query: 'Rotina',
-        schedule: '14:00',
-        email: 'lizzy@gmail.com'
-    },
+const cardsMedic = [{
+    id: '1',
+    img: { uri: 'https://avatars.githubusercontent.com/u/125309990?v=4' },
+    situation: 'pendente',
+    name: 'Dra. Rebeca',
+    age: '16 anos',
+    query: 'Rotina',
+    schedule: '14:00',
+    email: 'doutor.rebeca@gmail.com',
+    crm: 'CRM-15286',
+    specialty: 'Clínica Geral'
+}];
 
 
-];
-
-
-export const DoctorHome = () => {
+export const PatientHome = () => {
     const [statusLista, setStatusLista] = useState("pendente");
     return (
         <Container>
             <Header
-                userName={'Dra. Rebeca'}
-                userPhoto={{ uri: "https://avatars.githubusercontent.com/u/125309990?v=4" }} />
+                userName={'Lana Del Rey'}
+                userPhoto={{ uri: "https://radiocidade.fm/uploads/2021/12/Lana-Del-Rey-4.png" }} 
+            />
             <Calendar />
 
             <StatusButtonContainer>
@@ -52,8 +52,11 @@ export const DoctorHome = () => {
 
             <CardList
                 status={statusLista}
-                cardsData={cardsPatient}
+                cardsData={cardsMedic}
             />
+
+            <ScheduleAppointmentButton />
+
         </Container>
     )
 }
