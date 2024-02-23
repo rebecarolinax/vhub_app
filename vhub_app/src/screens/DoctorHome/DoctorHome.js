@@ -8,7 +8,17 @@ import { useState } from "react";
 
 const cardsPatient = [
     {
-        id: '1', 
+        id: '1',
+        img: { uri: 'https://radiocidade.fm/uploads/2021/12/Lana-Del-Rey-4.png' },
+        situation: 'pendente',
+        name: 'Lana Del Rey',
+        age: '38 anos',
+        query: 'Rotina',
+        schedule: '14:00',
+        email: 'lizzy@gmail.com'
+    },
+    {
+        id: '2',
         img: { uri: 'https://radiocidade.fm/uploads/2021/12/Lana-Del-Rey-4.png' },
         situation: 'pendente',
         name: 'Lana Del Rey',

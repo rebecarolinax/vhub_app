@@ -38,7 +38,7 @@ export const UserProfileTextAreaEdition = styled(UserProfileInput).attrs({
     background-color: transparent;
     border: 2px solid #49b3ba;
     height: 120px;
-    width: 90%;
+    width: 100%;
     vertical-align: top;
     
 `
@@ -57,6 +57,7 @@ export const UserProfileInputEdition = styled(UserProfileTextAreaEdition).attrs(
 export const UserProfileInputContainerRow = styled.View`
     flex-direction: row;
     width: 90%;
+    margin: 35px;
 `
 export const UserProfileInputContainerAddress = styled(UserProfileInputContainer)`
     width: 55%;

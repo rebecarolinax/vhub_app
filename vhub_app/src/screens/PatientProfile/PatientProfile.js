@@ -57,7 +57,7 @@ export const PatientProfile = () => {
                     <ButtonTitle>Editar</ButtonTitle>
                 </Button>
 
-                <Button style={{ width: 200, backgroundColor: '#ACABB7', marginTop: 20 }}>
+                <Button style={{ width: 200, backgroundColor: '#ACABB7', margin: 20 }}>
                     <ButtonTitle>Sair do APP</ButtonTitle>
                 </Button>
             </Container>

@@ -5,17 +5,15 @@ import { Title, SubTitle } from "../../components/Title/style";
 import { UserProfileInputContainer, UserProfileInputEdition, UserProfileTextAreaEdition } from "../../components/UserProfileInput/style";
 import { UserProfilePhoto } from "../../components/UserProfilePhoto/style";
 
-
-
 export const ProntuaryMedical = ({ navigation }) => {
     return (
         <ContainerScrollView>
             <Container>
 
-                <UserProfilePhoto source={require('../../assets/foto-de-perfil.png')} />
-                <Title>Richard Kosta</Title>
+                <UserProfilePhoto source={{ uri: "https://radiocidade.fm/uploads/2021/12/Lana-Del-Rey-4.png" }} />
+                <Title>Lana Del Rey</Title>
 
-                <SubTitle>22 Anos    <SubTitle>richard.kosta@gmail.com</SubTitle></SubTitle>
+                <SubTitle>39 Anos    <SubTitle>lizzy@gmail.com</SubTitle></SubTitle>
 
                 <UserProfileInputContainer>
                     <LabelText>Descrição da Consulta</LabelText>
@@ -48,7 +46,7 @@ export const ProntuaryMedical = ({ navigation }) => {
                     <ButtonTitle>Salvar</ButtonTitle>
                 </Button>
 
-                <SecondaryButton onPress={() => navigation.navigate("MedicalRecord")}>
+                <SecondaryButton style={{ marginBottom: 20 }} onPress={() => navigation.navigate("MedicalRecord")}>
                     <SecondaryButtonText>Cancelar</SecondaryButtonText>
                 </SecondaryButton>
 

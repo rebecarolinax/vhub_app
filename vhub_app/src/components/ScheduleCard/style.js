@@ -29,3 +29,10 @@ export const RealizedScheduleTime = styled(ScheduleTime)`
     color: #4E4B59;
     background-color: #F1F0F5;
 `
+
+export const ScheduleClinicContainer = styled(ScheduleContainer)`
+    width: 40%;
+    height: 30px;
+    margin-top: 0;
+
+`

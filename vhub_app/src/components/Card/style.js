@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.View`
-    width: 320px;
+    width: 90%;
     height: 102px;
     background-color: #FFF;
     margin-bottom: 12px;
@@ -11,7 +11,7 @@ export const CardContainer = styled.View`
     gap: 10px;
     padding: 12px 20px 12px 12px;
     border-radius: 5px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    elevation: 10;
     position: relative;
 `
 
@@ -31,7 +31,7 @@ export const RealizedCardLinkText = styled(CardLinkText)`
 `
 
 export const CardClinicContainer = styled(CardContainer)`
-    height: 84px;
+    height: 100px;
     flex-direction: column;
     padding: 18px;
     margin-top: 12px;

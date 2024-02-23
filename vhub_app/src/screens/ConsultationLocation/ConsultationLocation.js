@@ -8,10 +8,10 @@ import { LabelText } from "../../components/Label/style"
 export const ConsultationLocation = () => {
     return (
         <ContainerScrollView>
-            <Container>
-                <MapClinic source={require('../../assets/map-clinic.png')} />
+            <Container style={{ height: '100%' }}>
+                <MapClinic source={require('../../assets/images/map-clinic.png')} />
 
-                <Title>Clínica Natureh</Title>
+                <Title style={{ margin: 30 }}>Clínica Natureh</Title>
                 <SubTitle>São Paulo, SP</SubTitle>
 
                 <UserProfileInputContainer>

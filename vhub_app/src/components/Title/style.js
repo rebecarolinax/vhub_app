@@ -43,13 +43,22 @@ export const SubTitleCardAge = styled.Text`
 `
 
 export const SubTitleCard = styled.Text`
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Quicksand_600SemiBold';
     color: #8C8A97;
 `
+export const SubTitleClinicCard = styled.Text`
+    font-size: 16px;
+    font-family: 'Quicksand_600SemiBold';
+    color: #4E4B59;
+`
 
-export const SubTitleCardAvaliation = styled.Text`
+export const SubTitleCardScore = styled.Text`
     font-size: 14px;
     font-family: 'Quicksand_600SemiBold';
     color: #F9A620;
+`
+export const SubTitleMedicCard = styled(SubTitleCard)`
+    font-size: 14px;
+    font-family: 'Quicksand_500Medium'
 `

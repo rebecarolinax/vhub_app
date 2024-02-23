@@ -24,7 +24,7 @@ export const ModalAppointment = ({ animation, transparent, visible, onPress, img
                         <SubTitleContainerModal>
                             <SubTitle>Ao cancelar essa consulta, abrirá uma possível disponibilidade no seu horário, deseja mesmo cancelar essa consulta?</SubTitle>
                         </SubTitleContainerModal>
-                        <Button>
+                        <Button onPress={onPress}>
                             <ButtonTitle>Confirmar</ButtonTitle>
                         </Button>
                         <SecondaryButton onPress={onPress}>

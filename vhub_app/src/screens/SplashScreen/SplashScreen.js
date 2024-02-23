@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Image, Animated } from 'react-native';
+import { Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ContainSplash } from './style';
 

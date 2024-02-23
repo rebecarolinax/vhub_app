@@ -1,8 +1,8 @@
-import { RealizedScheduleTime, RealizedTimeContainer, ScheduleContainer, ScheduleTime } from "../ScheduleCard/style";
+import { RealizedScheduleTime, RealizedTimeContainer, ScheduleClinicContainer, ScheduleContainer, ScheduleTime } from "../ScheduleCard/style";
 import { CardClinicContainer, CardClinicContent, CardContainer, CardContainerText, CardLinkText, RealizedCardLinkText } from "./style";
-import { SubTitleCard, SubTitleCardAge, SubTitleCardAvaliation } from "../Title/style";
+import { SubTitleCard, SubTitleCardAge, SubTitleCardAvaliation, SubTitleCardScore, SubTitleClinicCard, SubTitleMedicCard } from "../Title/style";
 import { UserProfilePhotoCard } from "../UserProfilePhoto/style";
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 import { TitleCard } from "../Title/style";
 
 export const AppointmentCard = ({ img, name, age, query, schedule, email, situation, onPressAppoiment, onPressCancel }) => {
@@ -33,13 +33,34 @@ export const AppointmentCard = ({ img, name, age, query, schedule, email, situat
 }
 
 
-export const ClinicSelectCard  = () => {
-    return(
-        <CardClinicContainer>
-            <CardClinicContent>
-                <TitleCard>Clínica Natureh</TitleCard>
-                <SubTitleCardAvaliation><AntDesign name="star" size={16} color="#F9A620" />4,2</SubTitleCardAvaliation>
-            </CardClinicContent>
+export const ClinicSelectCard = ({ id, clinicName, onPress, select, score, city, uf, days }) => {
+    return (
+        <CardClinicContainer clickButton={select} onPress={onPress}>
+            <>
+                <CardClinicContent>
+                    <TitleCard>{clinicName}</TitleCard>
+                    <SubTitleCardScore><AntDesign name="star" size={16} color="#F9A620" />{score}</SubTitleCardScore>
+                </CardClinicContent>
+
+                <CardClinicContent>
+                    <SubTitleClinicCard>{city}, {uf}</SubTitleClinicCard>
+                    <ScheduleClinicContainer>
+                        <ScheduleTime><MaterialCommunityIcons name="calendar-outline" size={16} color="#49B3BA" /> {days}</ScheduleTime>
+                    </ScheduleClinicContainer>
+                </CardClinicContent>
+            </>
         </CardClinicContainer>
+    )
+}
+
+export const MedicSelectCard = ({ id, img, medicName, speciality }) => {
+    return (
+        <CardContainer>
+            <UserProfilePhotoCard source={img} />
+            <CardContainerText>
+                <TitleCard>{medicName}</TitleCard>
+                <SubTitleMedicCard>{speciality}</SubTitleMedicCard>
+            </CardContainerText>
+        </CardContainer>
     )
 }
