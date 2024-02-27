@@ -36,7 +36,7 @@ export const ModalScheduleView = styled(ModalView)`
 
 export const ModalScheduleContainer = styled(ModalMedicalRecordContainer)`
     width: 360px;
-    height: 50%;
+    height: 70%;
     border-radius: 10px 10px 0px 0px;
     justify-content: space-evenly;
 `
