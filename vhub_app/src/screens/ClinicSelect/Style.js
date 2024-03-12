@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { LinkMedium } from "../../components/Link/Style";
 
 
-export const CardContent = styled.View`
+export const CardContent = styled.TouchableOpacity`
     width: 95%;
     background-color: white;
     elevation: 5;

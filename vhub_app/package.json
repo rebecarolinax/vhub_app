@@ -27,8 +27,11 @@
     "react-native-calendar-strip": "^2.2.6",
     "react-native-calendars": "^1.1304.0",
     "react-native-dropdown-select-list": "^2.0.5",
+    "react-native-maps-directions": "^1.9.0",
     "react-native-select-dropdown": "^3.4.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "expo-location": "~16.5.5",
+    "react-native-maps": "1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

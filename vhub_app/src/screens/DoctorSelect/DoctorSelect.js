@@ -6,6 +6,7 @@ import { CancelLink, CardContent, TextClinic } from "../ClinicSelect/Style"
 import { DoctorCard, InformationContainer } from "./Style"
 
 export const DoctorSelect = ({ navigation }) => {
+   
     return(
         <ContainerUser contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
              <Title style={{ marginTop: 30, marginBottom: 50 }}>Selecionar médico</Title>

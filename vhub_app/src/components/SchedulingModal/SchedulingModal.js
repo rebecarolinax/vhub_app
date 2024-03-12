@@ -34,7 +34,7 @@ export const SchedulingModal = ({
                 <ModalTextBig>Tipo da consulta</ModalTextBig>
                 <ModalTextMini>Rotina</ModalTextMini>
 
-                <ModalButton onPress={() => navigation.replace("PacienteConsultas")}>
+                <ModalButton onPress={() => navigation.replace("Main")}>
                     <ButtonTitle>Confirmar</ButtonTitle>
                 </ModalButton>
 
