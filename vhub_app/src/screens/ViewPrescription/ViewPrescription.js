@@ -1,15 +1,33 @@
 import { FontAwesome6, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
 import { ContainerUser, ContentProntuario, PhotoContainer } from '../../components/Container/Style'
 import { InputUser, PhotoButton } from '../../components/Input/Style'
+
 import { SubTextQuick } from '../../components/Text/Text'
 import { ButtonTitle, LabelUser, TitleUser } from '../../components/Title/Style'
 import { UserContainer } from '../../components/UserContainer/Style'
+
 import { View } from 'react-native'
 import { SendPhotoButton } from '../../components/Button/Style'
 import { CancelText } from '../../components/Link/Style'
 
+import CameraProntuary from "../../components/CameraProntuary/CameraProntuary"
+import { Camera, CameraType } from 'expo-camera';
+import { useState, useEffect, useRef } from 'react'
+
+import { FontAwesome } from '@expo/vector-icons'
+// import * as MediaLibrary xfrom 'expo-media-library'
+
 export const ViewPrescription = ({ navigation }) => {
+
+  const [mostrarCamera, setmostrarCamera] = useState(false);
+  
+  const showCamera = () => {
+      setmostrarCamera(mostrarCamera ? false : true)
+  }
+
     return(
+        <>
+        {mostrarCamera ? <CameraProntuary /> : (
         <ContainerUser contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
         <PhotoContainer>
         <UserContainer source={require('../../assets/UserDoctorBig.png')}/>
@@ -37,8 +55,7 @@ export const ViewPrescription = ({ navigation }) => {
         placeholder={`Medicamento: Advil\nDosagem: 50 mg\nFrequência: 3 vezes ao dia\nDuração: 3 dias`}
         placeholderTextColor="#4E4B59"
         /> 
-
-        
+     
         <View style={{ width: '100%', alignItems: 'center'}}>
         <LabelUser>Exames médicos</LabelUser>
         <FontAwesome6 name="file-arrow-down" size={24} color="black" style={{ position: 'absolute', top: 108.1, zIndex: 1, right: 300}}/>
@@ -46,13 +63,14 @@ export const ViewPrescription = ({ navigation }) => {
         <PhotoButton style={{ height: 111, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 0}}
         placeholder="                  Nenhuma foto informada"
         placeholderTextColor="#4E4B59"
+        onPress={showCamera}
         ><ButtonTitle style={{ fontFamily: 'MontserratAlternates_500Medium', fontSize: 14, color: '#4E4B59', textTransform: 'none', marginTop: 43, marginLeft: 80}}>Nenhuma foto informada</ButtonTitle></PhotoButton>
         </View>
 
         <View style={{ width: '90%', alignItems: 'center', flexDirection: 'row', borderBottomWidth: 2, paddingBottom: 10, borderColor: '#8C8A97'}}>
         <SendPhotoButton>
-            <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
-            <ButtonTitle style={{ fontFamily: 'MontserratAlternates_700Bold', textTransform: 'none'}}>Enviar</ButtonTitle>
+        <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
+        <ButtonTitle style={{ fontFamily: 'MontserratAlternates_700Bold', textTransform: 'none'}}>Enviar</ButtonTitle>
         </SendPhotoButton>
 
         <CancelText style={{ color: '#C81D25', alignItems: 'center', marginRight: 70}}>Cancelar</CancelText>
@@ -65,5 +83,7 @@ export const ViewPrescription = ({ navigation }) => {
 
         <CancelText onPress={() => navigation.replace("Main")}>Voltar</CancelText>
         </ContainerUser>
+        )}
+        </>
     )
 }
