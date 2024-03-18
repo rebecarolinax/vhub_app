@@ -3,12 +3,44 @@ import { ButtonTitle, Title } from "../Title/Style"
 import { ModalButton, ModalContent, ModalText, PatientModal } from "./Style"
 import { CancelText } from "../Link/Style"
 
+import * as Notifications from "expo-notifications"
+
+Notifications.requestPermissionsAsync()
+
+Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+        shouldShowAlert: true,
+        shouldPlaySound: true,
+        shouldSetBadge: true
+    })
+})
+
+
 export const CancelationModal = ({
     visible,
     setShowModalCancel,
     ...rest
 }) => {
-    return(
+
+
+    const HandleCallNotifications = async () => {
+        const { status } = await Notifications.getPermissionsAsync()
+
+        if (status !== "granted") {
+            alert("voce nao deixou as notificacoes ativas")
+            return;
+        }
+
+        await Notifications.scheduleNotificationAsync({
+            content: {
+                title: "Consulta cancelada",
+                body: "Sua consulta foi cancelada"
+            },
+            trigger: null
+        });
+    }
+
+    return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <PatientModal>
                 <ModalContent>
@@ -16,7 +48,7 @@ export const CancelationModal = ({
                     <Title>Cancelar consulta</Title>
                     <ModalText>Ao cancelar essa consulta, abrirá uma possível disponibilidade no seu horário, deseja mesmo cancelar essa consulta?</ModalText>
 
-                    <ModalButton>
+                    <ModalButton onPress={HandleCallNotifications}>
                         <ButtonTitle>Confirmar</ButtonTitle>
                     </ModalButton>
 
